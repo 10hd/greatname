@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greatname.net</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-900">
+    <header>
+        <nav class="bg-gray-800 p-4 flex items-center">
+            <h1 class="text-3xl text-green-600">greatname.net</h1>
+            <h2 class="text-2xl opacity-50 pt-1 ml-auto text-green-600">It's nothing more than a name</h2>
+        </nav>
+        <nav class="bg-gray-700 text-gray-400 p-1 px-4 flex space-x-6">
+            <a href="index.html" id="home" class="px-2 hover:bg-gray-600">Home</a>
+            <a href="about.html" id="about" class="px-2 hover:bg-gray-600">About</a>
+            <a href="directory.html" id="directory" class="px-2 hover:bg-gray-600">Directory</a>
+            <a href="portfolio.html" id="portfolio" class="px-2 hover:bg-gray-600">Portfolio</a>
+            <a href="notes.html" id="notes" class="px-2 hover:bg-gray-600">Notes</a>
+            <a href="contact.html" id="contact" class="px-2 hover:bg-pink-900 ml-auto">Contact</a>
+            <a href="/" class="px-2 hover:bg-cyan-800">Download Source</a>
+        </nav>
+    </header>
+    <main>
+        <div class="grid grid-cols-[3fr_1fr] gap-4">
+            <section class="p-8 mx-10 border-2 border-gray-700 mt-8">
+                <h1 id="current" class="text-2xl text-green-600"></h1>
+                <ol class="list-decimal text-gray-300 mx-8 mt-6 space-y-12">
+                    <li>
+                        <h2 id="introduction" class="text-xl text-gray-300 mt-4">Introduction</h2>
+                        <ol class="list-decimal text-gray-300 mx-8 space-y-12">
+                            <li>
+                                <h2 id="introduction" class="text-xl text-gray-300 mt-4 underline">Introduction to greatname.net</h2>
+                                <p class="text-gray-400 text-lg">greatname.net is a simple project website for my personal projects. I could make something bigger but I prefer to keep it small since I am a student and have limited resources and time. :P</p>
+                            </li>
+                            <li>
+                                <h2 id="story" class="text-xl text-gray-300 mt-4 underline">The story behind the name</h2>
+                                <p class="text-gray-400 text-lg">The title of this chapter might make you believe that there is a deep and complicated story behind the name, but in reality, there isn't. It's just a name I liked and stuck with it. It's not a very creative name, but I like it and also, it's easy to remember.</p>
+                            </li>
+                            <li>
+                                <h2 id="setup" class="text-xl text-gray-300 mt-4 underline">My current setup</h2>
+                                <p class="text-gray-400 text-lg">I use a pretty basic setup, at least that's what I think. My main machine is a desktop computer running Gentoo Linux. It's probably worth mentioning that I do use a laptop too for travel. For that I have an old Macbook Pro running Debian. I write most of my code in Visual Studio Code but I do sometimes use Vim and nano. In case anyone is wondering, I do not enjoy ricing my systems as it is not for me but I appreciate the work some people put into it.</p>
+                            </li>
+                            <li>
+                                <h2 id="why" class="text-xl text-gray-300 mt-4 underline">Why I do what I do</h2>
+                                <p class="text-gray-400 text-lg">I got into programming and web development because I enjoy creating and building things. I know this might sound cliché, but it's true. There isn't really a deeper reason. </p>
+                            </li>
+                            <li>
+                                <h2 id="mistakes" class="text-xl text-gray-300 mt-4 underline">Mistakes I've made</h2>
+                                <p class="text-gray-400 text-lg">You probably expected me to say this but I don't keep track of my mistakes, sorry!</p>
+                            </li>
+                            <li>
+                                <h2 id="future" class="text-xl text-gray-300 mt-4 underline">The future of greatname.net</h2>
+                                <p class="text-gray-400 text-lg">Honestly, I'm not sure. LOL! I kinda just go with the flow and see where it takes me. A lot of the time greatname.net just sits dormant since I genuinely forget that it exists.</p>
+                            </li>
+                            <!-- <li>
+                                <h2 id="" class="text-xl text-gray-300 mt-4 underline"></h2>
+                                <p class="text-gray-400 text-lg"></p>
+                            </li> -->
+                        </ol>
+                    </li>
+                    <li>
+                        <h2 id="updates" class="text-xl text-gray-300 mt-4">Updates</h2>
+                        <ol class="list-decimal text-gray-300 mx-8 space-y-12">
+                            <li>
+                                <h2 id="web" class="text-xl text-gray-300 mt-4 underline">web 1.0.0</h2>
+                                <p class="text-gray-400 text-lg">I've decided to name the updates for this current website in the format of "web X.Y.Z". This is a simple way to keep track of the different versions and this version is the first one, therefore, version 1.0.0.</p>
+                            </li>
+                            <!-- <li>
+                                <h2 id="" class="text-xl text-gray-300 mt-4 underline"></h2>
+                                <p class="text-gray-400 text-lg"></p>
+                            </li> -->
+                        </ol>
+                    </li>
+                    <li>
+                        <h2 id="notices" class="text-xl text-gray-300 mt-4">Notices</h2>
+                        <ol class="list-decimal text-gray-300 mx-8 space-y-12">
+                            <li>
+                                <h2 id="freetocopy" class="text-xl text-gray-300 mt-4 underline">Free to copy</h2>
+                                <p class="text-gray-400 text-lg">You are free to copy any content from this website for personal or commercial use, just give a shoutout to greatname.net and your good!</p>
+                            </li>
+                            <!-- <li>
+                                <h2 id="" class="text-xl text-gray-300 mt-4 underline"></h2>
+                                <p class="text-gray-400 text-lg"></p>
+                            </li> -->
+                        </ol>
+                    </li>
+                </ol>
+                
+            </section>
+            <section class="p-8 bg-slate-950">
+                <ol class="list-decimal text-green-500 mx-8 space-y-6">
+                    <li>
+                        <a href="#introduction" class="text-xl hover:text-green-700 hover:underline">Introduction</a>
+                        <ol class="list-decimal text-green-500 mx-8 space-y-6">
+                            <li>
+                                <a href="#introduction" class="text-xl hover:text-green-700 hover:underline">Introduction to greatname.net</a>
+                            </li>
+                            <li>
+                                <a href="#story" class="text-xl hover:text-green-700 hover:underline">The story behind the name</a>
+                            </li>
+                            <li>
+                                <a href="#setup" class="text-xl hover:text-green-700 hover:underline">My current setup</a>
+                            </li>
+                            <li>
+                                <a href="#why" class="text-xl hover:text-green-700 hover:underline">Why I do what I do</a>
+                            </li>
+                            <li>
+                                <a href="#mistakes" class="text-xl hover:text-green-700 hover:underline">Mistakes I've made</a>
+                            </li>
+                            <li>
+                                <a href="#future" class="text-xl hover:text-green-700 hover:underline">The future of greatname.net</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#" class="text-xl hover:text-green-700 hover:underline"></a>
+                            </li> -->
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#updates" class="text-xl hover:text-green-700 hover:underline">Updates</a>
+                        <ol class="list-decimal text-green-500 mx-8 space-y-6">
+                            <li>
+                                <a href="#web" class="text-xl hover:text-green-700 hover:underline">web 1.0.0</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#" class="text-xl hover:text-green-700 hover:underline"></a>
+                            </li> -->
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#notices" class="text-xl hover:text-green-700 hover:underline">Notices</a>
+                        <ol class="list-decimal text-green-500 mx-8 space-y-6">
+                            <li>
+                                <a href="#freetocopy" class="text-xl hover:text-green-700 hover:underline">Free to copy</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#" class="text-xl hover:text-green-700 hover:underline"></a>
+                            </li> -->
+                        </ol>
+                    </li>
+                </ol>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-gray-400 p-4 mt-8 text-center text-xl">
+        <p><em>made with love - greatname.net</em></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

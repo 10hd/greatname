@@ -1,0 +1,15 @@
+ol {
+  counter-reset: item;
+}
+ol li {
+  display: block;
+}
+ol li::before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+ol li h2 {
+  display: inline;
+}
+
+/*# sourceMappingURL=style.css.map */
