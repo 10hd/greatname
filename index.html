@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>greatname.net</title>
+    <title>greatname.net | Home</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -11,7 +11,7 @@
     <header>
         <nav class="bg-gray-800 p-4 flex items-center">
             <h1 class="text-3xl text-green-600">greatname.net</h1>
-            <h2 class="text-2xl opacity-50 pt-1 ml-auto text-green-600">It's nothing more than a name</h2>
+            <h2 id="motd" class="text-2xl opacity-50 pt-1 ml-auto text-green-600 motd"></h2>
         </nav>
         <nav class="bg-gray-700 text-gray-400 p-1 px-4 flex space-x-6">
             <a href="index.html" id="home" class="px-2 hover:bg-gray-600">Home</a>
@@ -25,14 +25,14 @@
     </header>
     <main>
         <div class="grid grid-cols-[3fr_1fr] gap-4">
-            <section class="p-8 mx-10 border-2 border-gray-700 mt-8">
+            <section class="p-8 mx-10 mb-8 border-2 border-gray-700 mt-8">
                 <h1 id="current" class="text-2xl text-green-600"></h1>
                 <ol class="list-decimal text-gray-300 mx-8 mt-6 space-y-12">
                     <li>
                         <h2 id="introduction" class="text-xl text-gray-300 mt-4">Introduction</h2>
                         <ol class="list-decimal text-gray-300 mx-8 space-y-12">
                             <li>
-                                <h2 id="introduction" class="text-xl text-gray-300 mt-4 underline">Introduction to greatname.net</h2>
+                                <h2 id="intro" class="text-xl text-gray-300 mt-4 underline">Introduction to greatname.net</h2>
                                 <p class="text-gray-400 text-lg">greatname.net is a simple project website for my personal projects. I could make something bigger but I prefer to keep it small since I am a student and have limited resources and time. :P</p>
                             </li>
                             <li>
@@ -65,8 +65,12 @@
                         <h2 id="updates" class="text-xl text-gray-300 mt-4">Updates</h2>
                         <ol class="list-decimal text-gray-300 mx-8 space-y-12">
                             <li>
-                                <h2 id="web" class="text-xl text-gray-300 mt-4 underline">web 1.0.0</h2>
+                                <h2 id="web1" class="text-xl text-gray-300 mt-4 underline">web 1.0.0</h2>
                                 <p class="text-gray-400 text-lg">I've decided to name the updates for this current website in the format of "web X.Y.Z". This is a simple way to keep track of the different versions and this version is the first one, therefore, version 1.0.0.</p>
+                            </li>
+                            <li>
+                                <h2 id="web2" class="text-xl text-gray-300 mt-4 underline">web 1.0.1</h2>
+                                <p class="text-gray-400 text-lg">This is a major update I'd say. I added some new pages and features. Keep in mind, I am doing all this not trying to make it have good performance, but to look fun.</p>
                             </li>
                             <!-- <li>
                                 <h2 id="" class="text-xl text-gray-300 mt-4 underline"></h2>
@@ -79,7 +83,7 @@
                         <ol class="list-decimal text-gray-300 mx-8 space-y-12">
                             <li>
                                 <h2 id="freetocopy" class="text-xl text-gray-300 mt-4 underline">Free to copy</h2>
-                                <p class="text-gray-400 text-lg">You are free to copy any content from this website for personal or commercial use, just give a shoutout to greatname.net and your good!</p>
+                                <p class="text-gray-400 text-lg">You are free to copy any content from this website for personal or commercial use, just give a shoutout to greatname.net and you're good!</p>
                             </li>
                             <!-- <li>
                                 <h2 id="" class="text-xl text-gray-300 mt-4 underline"></h2>
@@ -88,15 +92,14 @@
                         </ol>
                     </li>
                 </ol>
-                
             </section>
-            <section class="p-8 bg-slate-950">
+            <section class="p-8 bg-zinc-900">
                 <ol class="list-decimal text-green-500 mx-8 space-y-6">
                     <li>
                         <a href="#introduction" class="text-xl hover:text-green-700 hover:underline">Introduction</a>
                         <ol class="list-decimal text-green-500 mx-8 space-y-6">
                             <li>
-                                <a href="#introduction" class="text-xl hover:text-green-700 hover:underline">Introduction to greatname.net</a>
+                                <a href="#intro" class="text-xl hover:text-green-700 hover:underline">Introduction to greatname.net</a>
                             </li>
                             <li>
                                 <a href="#story" class="text-xl hover:text-green-700 hover:underline">The story behind the name</a>
@@ -122,7 +125,10 @@
                         <a href="#updates" class="text-xl hover:text-green-700 hover:underline">Updates</a>
                         <ol class="list-decimal text-green-500 mx-8 space-y-6">
                             <li>
-                                <a href="#web" class="text-xl hover:text-green-700 hover:underline">web 1.0.0</a>
+                                <a href="#web1" class="text-xl hover:text-green-700 hover:underline">web 1.0.0</a>
+                            </li>
+                            <li>
+                                <a href="#web2" class="text-xl hover:text-green-700 hover:underline">web 1.0.1</a>
                             </li>
                             <!-- <li>
                                 <a href="#" class="text-xl hover:text-green-700 hover:underline"></a>
@@ -144,9 +150,12 @@
             </section>
         </div>
     </main>
-    <footer class="bg-gray-800 text-gray-400 p-4 mt-8 text-center text-xl">
-        <p><em>made with love - greatname.net</em></p>
-    </footer>
+    <div class="relative">
+        <img id="mascot" src="wav2.png" alt="BayoBayo">
+        <footer class="bg-gray-800 text-gray-400 p-4 text-center text-xl">
+            <p><em>made with love - greatname.net</em></p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

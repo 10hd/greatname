@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greatname.net | About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-900">
+    <header>
+        <nav class="bg-gray-800 p-4 flex items-center">
+            <h1 class="text-3xl text-green-600">greatname.net</h1>
+            <h2 id="motd" class="text-2xl opacity-50 pt-1 ml-auto text-green-600 motd"></h2>
+        </nav>
+        <nav class="bg-gray-700 text-gray-400 p-1 px-4 flex space-x-6">
+            <a href="index.html" id="home" class="px-2 hover:bg-gray-600">Home</a>
+            <a href="about.html" id="about" class="px-2 hover:bg-gray-600">About</a>
+            <a href="directory.html" id="directory" class="px-2 hover:bg-gray-600">Directory</a>
+            <a href="portfolio.html" id="portfolio" class="px-2 hover:bg-gray-600">Portfolio</a>
+            <a href="notes.html" id="notes" class="px-2 hover:bg-gray-600">Notes</a>
+            <a href="contact.html" id="contact" class="px-2 hover:bg-pink-900 ml-auto">Contact</a>
+            <a href="/" class="px-2 hover:bg-cyan-800">Download Source</a>
+        </nav>
+    </header>
+    <main>
+        <div class="grid grid-cols-[3fr_1fr] gap-4">
+            <section class="p-8 mx-10 mb-8 border-2 border-gray-700 mt-8">
+                <h1 id="current" class="text-2xl text-green-600"></h1>
+                <ol class="list-decimal text-gray-300 mx-8 mt-6 space-y-12">
+                    <li>
+                        <h2 id="who" class="text-xl text-gray-300 mt-4">Who am I?</h2>
+                        <ol class="list-decimal text-gray-300 mx-8 space-y-12">
+                            <li>
+                                <h2 id="growing" class="text-xl text-gray-300 mt-4 underline">Growing up</h2>
+                                <p class="text-gray-400 text-lg">I'd prefer to not mention where I grew up but I can say that my childhood was nothing to write home about. What I mean is that it was quite ordinary and there isn't anything worth mentioning.</p>
+                            </li>
+                            <li>
+                                <h2 id="education" class="text-xl text-gray-300 mt-4 underline">Education</h2>
+                                <p class="text-gray-400 text-lg">I'm currently a student and I study the technology programme. I do enjoy studying technology but if I'm being honest, it can be quite challenging at times but it can also be very boring. I mostly focus on the web development course but I am mostly done with it already.</p>
+                            </li>
+                            <li>
+                                <h2 id="freetime" class="text-xl text-gray-300 mt-4 underline">What I do in my free time</h2>
+                                <p class="text-gray-400 text-lg">Mostly gaming and watching anime/movies haha. It's a nice way to relax but it's definitely not for everyone. I get random bursts of motivation towards my goals and make random stuff. For example, this exact website. I didn't plan this at all and I am completely freestyling. Although I did take inspiration from other websites (mostly the Arch Linux website and suckless.org).</p>
+                            </li>
+                            <li>
+                                <h2 id="misc" class="text-xl text-gray-300 mt-4 underline">Miscellaneous information</h2>
+                                <p class="text-gray-400 text-lg">I don't know what else to say about myself. I felt like this page would be quite empty when I made it so I'm just trying to fill it up as I go.</p>
+                            </li>
+                            <!-- <li>
+                                <h2 id="" class="text-xl text-gray-300 mt-4 underline"></h2>
+                                <p class="text-gray-400 text-lg"></p>
+                            </li> -->
+                        </ol>
+                    </li>
+                    <li>
+                        <h2 id="dreams" class="text-xl text-gray-300 mt-4">Dreams and Goals</h2>
+                        <ol class="list-decimal text-gray-300 mx-8 space-y-12">
+                            <li>
+                                <h2 id="work" class="text-xl text-gray-300 mt-4 underline">Work and money</h2>
+                                <p class="text-gray-400 text-lg">I don't have huge dreams when it comes to work and money. I just want to get a job I enjoy and buy the things I want.</p>
+                            </li>
+                            <li>
+                                <h2 id="freedom" class="text-xl text-gray-300 mt-4 underline">Freedom</h2>
+                                <p class="text-gray-400 text-lg">This title might be a bit misleading but this part is about what I'll do after I achieve my goals. As probably many others, I haven't thought about it. That's about it for me. If you made it this far, thanks for reading I guess. :)</p>
+                            </li>
+                            <!-- <li>
+                                <h2 id="" class="text-xl text-gray-300 mt-4 underline"></h2>
+                                <p class="text-gray-400 text-lg"></p>
+                            </li> -->
+                        </ol>
+                    </li>
+                </ol>
+                
+            </section>
+            <section class="p-8 bg-zinc-900">
+                <ol class="list-decimal text-green-500 mx-8 space-y-6">
+                    <li>
+                        <a href="#who" class="text-xl hover:text-green-700 hover:underline">Who am I?</a>
+                        <ol class="list-decimal text-green-500 mx-8 space-y-6">
+                            <li>
+                                <a href="#growing" class="text-xl hover:text-green-700 hover:underline">Growing up</a>
+                            </li>
+                            <li>
+                                <a href="#education" class="text-xl hover:text-green-700 hover:underline">Education</a>
+                            </li>
+                            <li>
+                                <a href="#freetime" class="text-xl hover:text-green-700 hover:underline">What I do in my free time</a>
+                            </li>
+                            <li>
+                                <a href="#misc" class="text-xl hover:text-green-700 hover:underline">Miscellaneous information</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#" class="text-xl hover:text-green-700 hover:underline"></a>
+                            </li> -->
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#dreams" class="text-xl hover:text-green-700 hover:underline">Dreams and Goals</a>
+                        <ol class="list-decimal text-green-500 mx-8 space-y-6">
+                            <li>
+                                <a href="#work" class="text-xl hover:text-green-700 hover:underline">Work and money</a>
+                            </li>
+                            <li>
+                                <a href="#freedom" class="text-xl hover:text-green-700 hover:underline">Freedom</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#" class="text-xl hover:text-green-700 hover:underline"></a>
+                            </li> -->
+                        </ol>
+                    </li>
+                </ol>
+                
+            </section>
+        </div>
+    </main>
+    <div class="relative">
+        <img id="mascot" src="wav2.png" alt="BayoBayo">
+        <footer class="bg-gray-800 text-gray-400 p-4 text-center text-xl">
+            <p><em>made with care - greatname.net</em></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

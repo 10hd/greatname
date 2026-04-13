@@ -1,5 +1,5 @@
+/* the title stuff */
 const labels = {
-    "/": "Home",
     "/index.html": "/Home",
     "/about.html": "/About",
     "/directory.html": "/Directory",
@@ -18,3 +18,30 @@ document.querySelectorAll('nav a[href]').forEach(a => {
         a.classList.add('text-gray-300', 'font-bold');
     }
 });
+
+/* the mascto wave animation stuff */
+const frames = ['wav1.png', 'wav2.png'];
+let current = 0;
+
+const mascot = document.querySelectorAll('#mascot, #mascotdir');
+setInterval(() => {
+    mascot.forEach(m => {
+        m.src = frames[current];
+    });
+    current = (current + 1) % frames.length;
+}, 500);
+
+/* motd-ish stuff */
+const taglines = [
+    "It's nothing more than a name",
+    "funny text",
+    "I'll be honest, this website has no purpose",
+    "This website is a mess, but it's my mess",
+    "Made in Sweden",
+    "BayoBayo is the best mascot",
+    "No cookies, I promise, or do I?",
+    "Don't look at the source code, it's chaos",
+    "I don't know what to put here",
+];
+
+document.getElementById('motd').textContent = taglines[Math.floor(Math.random() * taglines.length)];

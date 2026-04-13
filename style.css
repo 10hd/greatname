@@ -12,4 +12,22 @@ ol li h2 {
   display: inline;
 }
 
+#mascot {
+  position: absolute;
+  bottom: calc(100% - 8px);
+  right: 1.5rem;
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+}
+
+#mascotdir {
+  position: absolute;
+  bottom: -8px;
+  right: 1.5rem;
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+}
+
 /*# sourceMappingURL=style.css.map */

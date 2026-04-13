@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greatname.net | Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-900">
+    <header>
+        <nav class="bg-gray-800 p-4 flex items-center">
+            <h1 class="text-3xl text-green-600">greatname.net</h1>
+            <h2 id="motd" class="text-2xl opacity-50 pt-1 ml-auto text-green-600"></h2>
+        </nav>
+        <nav class="bg-gray-700 text-gray-400 p-1 px-4 flex space-x-6">
+            <a href="index.html" id="home" class="px-2 hover:bg-gray-600">Home</a>
+            <a href="about.html" id="about" class="px-2 hover:bg-gray-600">About</a>
+            <a href="directory.html" id="directory" class="px-2 hover:bg-gray-600">Directory</a>
+            <a href="portfolio.html" id="portfolio" class="px-2 hover:bg-gray-600">Portfolio</a>
+            <a href="notes.html" id="notes" class="px-2 hover:bg-gray-600">Notes</a>
+            <a href="contact.html" id="contact" class="px-2 hover:bg-pink-900 ml-auto">Contact</a>
+            <a href="/" class="px-2 hover:bg-cyan-800">Download Source</a>
+        </nav>
+    </header>
+    <main>
+        <section class="p-8 mx-10 mb-8 border-2 border-gray-700 mt-8">
+            <h1 id="current" class="text-2xl text-green-600"></h1>
+            <p class="text-gray-400 text-lg">This is the directory of this website. Feel free to do whatever you want with it! <span class="opacity-50">I make this manually, so it might not be up-to-date or made in the best way.</span></p>
+            <p class="text-gray-400 text-lg">Alternative directory <a href="/" class="text-blue-500 hover:text-blue-600">here.</a></p>
+            <div class="grid grid-cols-2 gap-8 ml-8 mt-15">
+                <section class="border-2 border-gray-700 p-8 bg-zinc-900">
+                    <h2 class="text-xl underline text-gray-400">Website</h2>
+                    <ul class="mx-6 mt-4 space-y-2">
+                        <li>
+                            <a href="index.html" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">index.html</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">about.html</a>
+                        </li>
+                        <li>
+                            <a href="directory.html" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">directory.html</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">portfolio.html</a>
+                        </li>
+                        <li>
+                            <a href="notes.html" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">notes.html</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">contact.html</a>
+                        </li>
+                        <li>
+                            <a href="script.js" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">script.js</a>
+                        </li>
+                        <li>
+                            <a href="style.scss" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">style.scss</a>
+                        </li>
+                        <li>
+                            <a href="style.css.map" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">style.css.map</a>
+                        </li>
+                        <li>
+                            <a href="style.css" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">style.css</a>
+                        </li>
+                        <li>
+                            <a href="bayobayo.png" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">bayobayo.png</a>
+                        </li>
+                        <li>
+                            <a href="wav1.png" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">wav1.png</a>
+                        </li>
+                        <li>
+                            <a href="wav2.png" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">wav2.png</a>
+                        </li>
+                        <li>
+                            <a href="source.tar.gz" class="text-lg underline text-blue-500 hover:text-blue-600 hover:no-underline">source.tar.gz</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="relative border-2 border-gray-700 p-8 bg-zinc-900">
+                    <h2 class="text-xl underline text-gray-400">Projects</h2>
+                    <p class="text-lg text-gray-400">I'm not working on anything but <a href="bayobayo.png" download class="text-blue-500">here</a> is a picture of BayoBayo (I didn't pick the name).</p>
+                    <img id="mascotdir" src="wav2.png" alt="BayoBayo">
+                </section>
+            </div>
+            <p class="text-gray-400 text-lg mt-12">If you notice any issues or faults on my end, don't be scared to contact me about it. (^_^)</p>
+        </section>
+    </main>
+    <div class="relative">
+        <footer class="bg-gray-800 text-gray-400 p-4 text-center text-xl">
+            <p><em>i heart - greatname.net</em></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
