@@ -11,6 +11,33 @@ $options = [
 if ($dbconn) {
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($_POST["action"] === "register") {
+            if (!empty($_POST["phone_number"])){
+                header("Location: /404");
+                exit();
+            }
+
+            $ip = $_SERVER["REMOTE_ADDR"];
+            $limit_window = "1 hour";
+            $max = 5;
+
+            $rateQyery = "SELECT COUNT(*) FROM reg_attempts WHERE ip_address = $1 AND attempted_at > NOW() - INTERVAL '$limit_window'";
+            $rateResult = pg_query_params($dbconn, $rateQyery, [$ip]);
+
+            if ($rateResult) {
+                $count = (int)pg_fetch_result($rateResult, 0, 0);
+
+                if ($count >= $max) {
+                    header("Location: /?error=rate_limit_exceeded");
+                    exit();
+                }
+            }
+
+            $logQuery = "INSERT INTO reg_attempts (ip_address) VALUES ($1)";
+            $logResult = pg_query_params($dbconn, $logQuery, [$ip]);
+            if (!$logResult) {
+                error_log(pg_last_error($dbconn));
+            }
+
             $username = trim($_POST["usernameField"]);
             $email = trim($_POST["emailField"]);
 
@@ -19,7 +46,7 @@ if ($dbconn) {
                 exit();
             }
 
-            if (!preg_match("/^[a-zA-Z]+$/", $username)) {
+            if (!preg_match("/^[a-zA-Z0-9_]+$/", $username)) {
                 header("Location: /?error=invalid_username_format");
                 exit();
             }

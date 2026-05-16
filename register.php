@@ -29,6 +29,10 @@
                 <p class="text-lg text-mist-400 pl-4">Password <a href="resetPassword.php" class="text-sm text-blue-500 float-right opacity-80 p-1 mr-2 hover:underline">forgot?</a></p>
                 <input class="bg-mist-200 text-black rounded-full mb-4 mt-1 w-full p-2 focus:outline-none focus:ring-0" type="password" name="passwordField" id="passwordInput">
             </div>
+            <div class="hidden">
+                <label for="phone_number">Phone Number</label>
+                <input type="text" name="phone_number" id="phone_number" autocomplete="off" tabindex="-1">
+            </div>
             <div class="flex flex-col items-center justify-center gap-2">
                 <button name="action" value="login" type="submit" id="loginButton" class="mt-6 bg-[#6674b2] opacity-80 border-2 border-transparent hover:bg-slate-800 hover:border-white text-white font-bold w-80 py-2 px-4 rounded-full hover:cursor-pointer transition-colors">Sign In</button>
                 <button name="action" value="register" type="submit" id="registerButton" class="mt-2 bg-gray-500 opacity-80 border-2 border-transparent hover:bg-slate-900 hover:border-white text-white font-bold w-80 py-2 px-4 rounded-full hover:cursor-pointer transition-colors">Register</button>
