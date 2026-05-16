@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Ubuntu';
-    src: url('Ubuntu-Regular.ttf');
+    font-family: 'JetBrainsMono';
+    src: url('JetBrainsMono-Regular.ttf') format('truetype');
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'JetBrainsMono', monospace !important;
 }
