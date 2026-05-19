@@ -18,7 +18,7 @@ if ($dbconn) {
 
             $ip = $_SERVER["REMOTE_ADDR"];
             $limit_window = "1 hour";
-            $max = 5;
+            $max = 2;
 
             $rateQyery = "SELECT COUNT(*) FROM reg_attempts WHERE ip_address = $1 AND attempted_at > NOW() - INTERVAL '$limit_window'";
             $rateResult = pg_query_params($dbconn, $rateQyery, [$ip]);
