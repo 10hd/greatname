@@ -99,11 +99,6 @@ if ($result && pg_num_rows($result) > 0) {
                 <?php echo htmlspecialchars($user['emoji'] ?? 'No emoji set.'); ?>
             </p>
         </div>
-        <div class="flex gap-4 mt-2">
-            <a href="/dashboard" class="text-blue-500 text-lg hover:underline">Dashboard</a>
-            <span class="text-mist-500 cursor-default">|</span>
-            <a href="logout.php" class="text-blue-500 text-lg hover:underline">Log out</a>
-        </div>
         <?php else: ?>
             <div class="text-center p-8">
                 <h2 class="text-2xl font-bold mb-2 text-red-500">This user has been deactivated.</h2>
