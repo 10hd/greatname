@@ -7,7 +7,7 @@ if (!isset($_SESSION["username"])) {
     exit();
 }
 
-$query = "SELECT user_id, created_at, deactivated, is_admin, has_title, description, emoji FROM accounts WHERE name = $1";
+$query = "SELECT user_id, created_at, deactivated, is_admin, has_title, description, emoji, email FROM accounts WHERE name = $1";
 $result = pg_query_params($dbconn, $query, [$_SESSION["username"]]);
 
 if ($result) {
@@ -104,6 +104,13 @@ if ($result) {
                 <p class="text-mist-300 text-lg mb-4">
                   <input type="text" name="personality_emoji" maxlength="20" value="<?php echo htmlspecialchars($user['emoji'] ?? ''); ?>" class="bg-transparent border-b border-mist-400 focus:outline-none focus:ring-0 flex-1 text-mist-300 text-lg">
                   <button type="submit" class="text-blue-500 text-lg hover:underline cursor-pointer">Apply</button>
+                </p>
+            </form>
+            <form action="email.php" method="POST" class="flex flex-col gap-2">
+                <h4 class="text-lg font-bold mb-1">Email:</h4>
+                <p class="text-mist-300 text-lg mb-4">
+                  <input type="text" name="assigned_email" value="<?php echo htmlspecialchars($user['email'] ?? ''); ?>" class="bg-transparent border-b border-mist-400 focus:outline-none focus:ring-0 flex-1 text-mist-300 text-lg">
+                  <button type="submit" class="peer text-blue-500 text-lg hover:underline cursor-pointer">Apply</button>
                 </p>
             </form>
         </div>
