@@ -8,7 +8,7 @@ if (!$target_id) {
     die("No username specified.");
 }
 
-$query = "SELECT user_id, name, created_at, deactivated, is_admin, has_title, description, emoji FROM accounts WHERE name = $1";
+$query = "SELECT user_id, name, created_at, deactivated, is_admin, has_title, description, emoji, reason FROM accounts WHERE name = $1";
 $result = pg_query_params($dbconn, $query, [$target_id]);
 
 if ($result && pg_num_rows($result) > 0) {
@@ -105,8 +105,20 @@ if ($result && pg_num_rows($result) > 0) {
             <a href="logout.php" class="text-blue-500 text-lg hover:underline">Log out</a>
         </div>
         <?php else: ?>
-            <h2 class="text-2xl font-bold mb-2 text-red-500">This user has been deactivated.</h2>
+            <div class="text-center p-8">
+                <h2 class="text-2xl font-bold mb-2 text-red-500">This user has been deactivated.</h2>
+                <?php if (!empty($user['reason'])): ?>
+                    <p class="text-lg text-gray-400 mt-2 font-bold">
+                        Reason: <span class="text-white font-normal"><?php echo htmlspecialchars($user['reason']); ?></span>
+                    </p>
+                <?php endif; ?>
+            </div>
         <?php endif; ?>
+        <div class="flex gap-4 mt-2">
+            <a href="/dashboard" class="text-blue-500 text-lg hover:underline">Back</a>
+            <span class="text-mist-500 cursor-default">|</span>
+            <a href="logout.php" class="text-blue-500 text-lg hover:underline">Log out</a>
+        </div>
     </main>
     <footer class="mb-5 w-full text-center">
         <p>Copyright &copy; <span id="year"></span> greatname. All rights reserved.</p>
