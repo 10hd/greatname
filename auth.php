@@ -10,7 +10,10 @@ $options = [
 
 if ($dbconn) {
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        if ($_POST["action"] === "register") {
+
+	$action = $_POST["action"] ?? '';
+
+        if ($action === "register") {
             if (!empty($_POST["phone_number"])){
                 header("Location: /404");
                 exit();
@@ -38,8 +41,8 @@ if ($dbconn) {
                 error_log(pg_last_error($dbconn));
             }
 
-            $username = trim($_POST["usernameField"]);
-            $email = trim($_POST["emailField"]);
+            $username = trim($_POST["usernameField"] ?? '');
+            $email = trim($_POST["emailField"] ?? '');
 
             if (empty($username) || empty($_POST["passwordField"])) {
                 header("Location: /?error=empty_fields");
@@ -83,14 +86,14 @@ if ($dbconn) {
                 header("Location: /?error=" . urlencode("db_failed"));
                 exit();
             }
-        } elseif ($_POST["action"] === "login") {
-            $username = trim($_POST["usernameField"]);
+        } elseif ($action === "login") {
+            $username = trim($_POST["usernameField"] ?? '');
             $selectQuery = "SELECT user_id, name, password_hash FROM accounts WHERE name = $1";
             $selectResults = pg_query_params($dbconn, $selectQuery, [$username]);
 
             if ($selectResults) {
                 $row = pg_fetch_assoc($selectResults);
-                if ($row && password_verify($_POST["passwordField"], $row["password_hash"])) {
+                if ($row && password_verify($_POST["passwordField"] ?? '', $row["password_hash"])) {
                     $_SESSION["username"] = $row["name"];
                     $_SESSION["user_id"] = $row["user_id"];
                     header("Location: /dashboard");
